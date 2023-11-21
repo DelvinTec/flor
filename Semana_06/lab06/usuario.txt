@@ -1,0 +1,3 @@
+Para el admin
+usuario:antonio
+contraseña:anto123456789

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Compra videojuegos</title>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/shop.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/her.png' %}" width="150" class="icon img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Más Info</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="my-4 text-danger"><a href="{% url 'index' %}" class="text-danger nav-link">
+                Todos los Productos</a></h1>
+            <div class="list-group">
+                <a href="rece" class="list-group-item text-danger"><img src="{% static 'img/accem.png' %}" width="50" class="icon img-fluid"> Rece</a>
+                <a href="maquina" class="list-group-item text-danger"><img src="{% static 'img/maq.png' %}" width="50" class="icon img-fluid"> Maquinas</a>
+            </div>
+        </div>
+
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <!-- Block Content -->
+            {% block content %}{% endblock %}
+            <!-- /Block Content -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-warning">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Delvin Onil Larez Mauricio 2023</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Información de Contacto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Nombre: Delvin Onil Larez Mauricio</p>
+                <p>Correo Electrónico: delvinonlm@gmail.com</p>
+                <p>Número de Teléfono: 931180140</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact Modal -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>
